@@ -1,0 +1,68 @@
+# Estrutura de dados para usuários
+users = {
+    1: {"username": "admin", "password": "adminpass", "role": "admin"},
+    2: {"username": "user1", "password": "userpass", "role": "employee"},
+    3: {"username": "user2", "password": "userpass", "role": "client"}
+}
+
+# Estrutura de dados para produtos
+products = [
+    {"name": "Produto A", "price": 100.0, "quantity": 10},
+    {"name": "Produto B", "price": 50.0, "quantity": 20},
+    {"name": "Produto C", "price": 200.0, "quantity": 5}
+]
+
+# Função para criar novo usuário
+def create_user():
+    usuario = input("Informe o usuário: ")
+    senha = input("Informe a senha: ")
+    if not usuario or not senha:
+        print("Erro: Informaçoes necessárias.")
+        return
+    print(f"Usuário criado com sucesso:\nUsuário: {usuario}")
+
+# Função para listar todos os usuários
+def list_users():
+    for user_id, user_info in users.items():
+        print(f"ID: {user_id}, Username: {user_info['username']}, Role: {user_info['role']}")
+
+# Função para buscar usuário por ID
+def find_user_by_id(user_id):
+    if user_id in users:
+        return users[user_id]
+    else:
+        return None
+
+# Função para criar novo produto
+def create_product():
+    product = input("Informe o produto: ")
+    preco = float(input("Informe o preco: "))
+    quantidade = int(input("Informe a quantidade: "))
+     
+    product = {
+        'product': nome,
+        'preco': preco,
+        'quantidade': quantidade
+    }
+    
+    return product
+# Função para listar todos os produtos
+def list_products():
+    for product in products:
+        print(f"Name: {product['name']}, Price: {product['price']}, Quantity: {product['quantity']}")
+
+# Função para buscar produto por nome
+def find_product_by_name(name):
+    for product in products:
+        if product['name'].lower() == name.lower():
+            return product
+    return None
+
+# Exemplo de uso das funções
+list_users()
+print("\nBuscando usuário por ID 2:")
+print(find_user_by_id(2))
+
+list_products()
+print("\nBuscando produto por nome 'Produto B':")
+print(find_product_by_name("Produto B"))
