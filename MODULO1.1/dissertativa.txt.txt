@@ -1,0 +1,8 @@
+
+1- Leia e armazene o valor de N; #entrada
+2- Aplique a subtração de N-1 para calcular o digito1 e armazene
+aplique a subtração de 10-N para calcular o digito2 e armazene,
+O resultado final da operação será:
+((digito1 x 10) + dígito2) #processamento
+
+3- Apresente o resultado da operação #saida
