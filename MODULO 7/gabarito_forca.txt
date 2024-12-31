@@ -1,0 +1,10 @@
+gato
+rato
+sapato
+garrafa
+casa
+celular
+aviao
+carro
+caneta
+escola
